@@ -5,30 +5,41 @@
 
 - ver [badgen](https://badgen.net/) o [shields](https://shields.io/) para otros tipos de _badges_
 
-## Autores
-
-- [@estudiante](https://www.github.com/estudiante)
+##  Autores
+- Juan Camilo Peñaloza [@mastercelta](https://www.github.com/mastercelta)
 
 ## Descripción del Proyecto
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut quam dolor. Quisque elementum est sed massa gravida convallis. Donec volutpat turpis eget lectus feugiat congue. Morbi rutrum auctor eleifend. Etiam iaculis libero tellus, vel aliquet erat tempor sed. Duis efficitur quam vel sapien luctus, sed semper lacus mollis. Suspendisse non nunc eleifend, aliquet elit eget, condimentum augue.
+**Taller 2** del curso **Lenguaje de Programación 2**.  
+El objetivo es completar una aplicación web  que simula una tienda virtual. Esta tienda muestra una **lista de productos**, incluyendo su **nombre**, **marca** y **precio**, con enlaces que llevan al detalle de cada producto.
 
-Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vel nibh fringilla, porta elit vel, consequat libero. Nulla et libero ac nulla ultricies sollicitudin. Sed viverra non nulla id convallis. Morbi vel varius lacus, in maximus nunc. Praesent sed semper diam. Pellentesque vehicula nulla augue, ut porta dolor consequat at.
-
+El proyecto utiliza **Python con Flask y SQLite** ademas de **HTML** como motor de plantillas.
 ## Instalación
-
-Morbi quam lectus, tempus sit amet mi non, facilisis dignissim erat. Aenean tortor libero, rhoncus eu eleifend ut, volutpat id nisi. Ut porta eros at ante rutrum pharetra. Integer nec nulla dictum, vestibulum ligula id, hendrerit ex. Morbi eget tortor metus.
 
 1. Clonar el proyecto
 ```bash
 git clone https://github.com/UR-CC/lp2-taller2.git
 ```
 
-2. Crear y activar entorno virtual
+2. Librerias y Dependencias
+
+## Entorno virtual mac
+1. Instalar librerías y dependencias
 ```bash
 cd lp2-taller2
 python -m venv venv
 venv/bin/activate
+```
+2. Instalar librerías y dependencias
+```bash
+pip install -r requirements
+```
+## Entorno virtual windows
+1. Instalar librerías y dependencias
+```bash
+cd lp2-taller2
+python -m venv venv
+venv\Scripts\Activate.ps1
 ```
 
 3. Instalar librerías y dependencias
@@ -37,8 +48,6 @@ pip install -r requirements.txt
 ```
     
 ## Ejecución
-
-Maecenas sed lorem at arcu varius mollis. Sed eleifend nulla ut blandit interdum. Donec sollicitudin nunc at orci facilisis dignissim. Donec at arcu luctus, commodo magna eget, blandit leo.
 
 1. Ejecutar el proyecto
 ```bash

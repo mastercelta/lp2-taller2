@@ -1,9 +1,7 @@
 # Lenguaje de Programación 2 - Taller 2
 
-![commits](https://badgen.net/github/commits/UR-CC/lp2-taller2?icon=github) 
-![last_commit](https://img.shields.io/github/last-commit/UR-CC/lp2-taller2)
-
-- ver [badgen](https://badgen.net/) o [shields](https://shields.io/) para otros tipos de _badges_
+![commits](https://badgen.net/github/commits/mastercelta/lp2-taller2?icon=github) 
+![last_commit](https://img.shields.io/github/last-commit/mastercelta/lp2-taller2)
 
 ##  Autores
 - Juan Camilo Peñaloza [@mastercelta](https://www.github.com/mastercelta)

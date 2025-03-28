@@ -3,14 +3,16 @@ import sqlite3
 from pprint import pprint
 
 # cargamos todos los datos
-conexion = sqlite3.connect('tienda.sqlite3')
-conexion.row_factory = sqlite3.Row 
+conexion = sqlite3.connect("tienda.sqlite3")
+conexion.row_factory = sqlite3.Row
 cursor = conexion.cursor()
 
 # obtener todos los productos
-cursor.execute("""
+cursor.execute(
+    """
 SELECT * FROM productos;
-""")
+"""
+)
 
 productos = [dict(producto) for producto in cursor.fetchall()]
 
@@ -20,15 +22,23 @@ conexion.close()
 # aplicación
 app = Flask(__name__)
 
-# rutas
-@app.route('/')
-def ruta_raiz():
-  return render_template('index.html', productos=productos)
 
-@app.route('/producto/<int:pid>')
+# rutas
+@app.route("/")
+def ruta_raiz():
+    return render_template("index.html", productos=productos)
+
+
+@app.route("/producto/<int:pid>")
 def ruta_producto(pid):
-  return render_template('producto.html', producto=productos[pid])
-  
+    for producto in productos:
+        if producto["id"] == pid:
+            return render_template("producto.html", producto=producto)
+    return redirect(
+        "/"
+    )  # si no se encuentra el producto, redirigir a la página principal
+
+
 # programa principal
-if __name__ == '__main__':
-  app.run(host='0.0.0.0', debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)

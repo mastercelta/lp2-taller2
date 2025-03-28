@@ -1,15 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
 
 html {
-
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
 }
 
-table {
-
+img.center {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
 }
 
-.center {
-   display: flex;
-   margin: 0 auto;
-   justify-content: center;
+table.center {
+  margin: 0 auto;
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table.center td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+table.center tr:last-child td {
+  border-bottom: none;
+}
+
+td a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #666;
+}
+
+.producto-card {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: white;
+  padding: 30px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.producto-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.producto-info {
+  flex-grow: 1;
+}
+
+.producto-info h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.producto-info h2 {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.regresar-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }

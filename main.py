@@ -14,7 +14,6 @@ SELECT * FROM productos;
 
 productos = [dict(row) for row in cursor.fetchall()]
 
-pprint(productos)
 cursor.close()
 conexion.close()
 
@@ -24,11 +23,11 @@ app = Flask(__name__)
 # rutas
 @app.route('/')
 def ruta_raiz():
-  pass
+  return render_template('index.html', productos=productos)
 
 @app.route('/producto/<int:pid>')
 def ruta_producto(pid):
-  pass
+  return render_template('producto.html', producto=productos[pid])
   
 # programa principal
 if __name__ == '__main__':

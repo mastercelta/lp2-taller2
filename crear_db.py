@@ -2,13 +2,23 @@
 import sqlite3
 
 # establecer la conexion
+conexion = sqlite3.connect('tienda.sqlite3')
+cursor = conexion.cursor()
 
 # eliminar la tabla
+cursor.execute("DROP TABLE IF EXISTS productos")
 
 # crear la tabla
 cursor.execute("""
-
-""")
+CREATE TABLE if not exists productos (
+    id INTEGER PRIMARY KEY,
+    categoria TEXT NOT NULL,
+    marca TEXT NOT NULL,
+    nombre TEXT NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio INTEGER NOT NULL
+)
+""");
 
 # insertar los datos iniciales
 datos = [
@@ -24,7 +34,8 @@ datos = [
 ]
 
 cursor.executemany("""
-
+INSERT INTO productos
+VALUES (?, ?, ?, ?, ?, ?)
 """, datos)
 
 # grabar

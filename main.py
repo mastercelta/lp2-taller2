@@ -12,7 +12,7 @@ cursor.execute("""
 SELECT * FROM productos;
 """)
 
-productos = [dict(row) for row in cursor.fetchall()]
+productos = [dict(producto) for producto in cursor.fetchall()]
 
 cursor.close()
 conexion.close()
